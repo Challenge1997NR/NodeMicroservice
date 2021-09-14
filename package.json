@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Challenge1997NR/NodeMicroservice/issues"
   },
-  "homepage": "https://github.com/Challenge1997NR/NodeMicroservice#readme"
+  "homepage": "https://github.com/Challenge1997NR/NodeMicroservice#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

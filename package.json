@@ -1,0 +1,23 @@
+{
+  "name": "challangenr",
+  "version": "1.0.0",
+  "description": "Example microservice Node.js and MongoDb",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Challenge1997NR/NodeMicroservice.git"
+  },
+  "keywords": [
+    "Microservice",
+    "Node.js"
+  ],
+  "author": "challange1997Nr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Challenge1997NR/NodeMicroservice/issues"
+  },
+  "homepage": "https://github.com/Challenge1997NR/NodeMicroservice#readme"
+}

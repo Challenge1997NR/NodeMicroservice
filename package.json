@@ -4,7 +4,7 @@
   "description": "Example microservice Node.js and MongoDb",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test",
+    "test": "echo \"There are no tests yet\" && exit 0",
     "dev": "nodemon index.js"
   },
   "repository": {

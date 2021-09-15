@@ -1,19 +1,17 @@
 # Based on https://nodejs.org/de/docs/guides/nodejs-docker-webapp/
 FROM node:14
 
-ENV NODE_ENV=development
-
-RUN apt-get update && apt-get -y dist-upgrade
-RUN apt install -y netcat
+ENV NODE_ENV=production
 
 WORKDIR /app
 
 COPY ["package.json", "package-lock.json*", "./"]
 
-RUN npm install
+# Install only dependencies listed in "dependencies" and not "devDependencies"
+RUN npm install --production
 
 COPY . .
 
 EXPOSE 3000
 
-CMD [ "node", "src/index.js" ]
+CMD [ "node", "index.js" ]

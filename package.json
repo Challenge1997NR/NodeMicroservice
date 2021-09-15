@@ -4,7 +4,8 @@
   "description": "Example microservice Node.js and MongoDb",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "echo \"There are no tests yet\" && exit 0",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/Challenge1997NR/NodeMicroservice/issues"
   },
-  "homepage": "https://github.com/Challenge1997NR/NodeMicroservice#readme"
+  "homepage": "https://github.com/Challenge1997NR/NodeMicroservice#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^4.1.1",
+    "mongoose": "^6.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
 }

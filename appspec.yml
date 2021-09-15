@@ -1,0 +1,24 @@
+version: 0.0
+os: linux
+files:
+  - source: codedeploy
+    destination: /home/ubuntu
+  - source: /
+    destination: /home/ubuntu/app
+permissions:
+  - object: codedeploy
+    pattern: "**"
+    owner: root
+hooks:
+  AfterInstall:
+    - location: codedeploy/pull.sh
+      timeout: 1000
+      owner: root
+  ApplicationStop:
+    - location: codedeploy/stop.sh
+      timeout: 600
+      owner: root
+  ApplicationStart:
+    - location: codedeploy/start.sh
+      timeout: 600
+      owner: root

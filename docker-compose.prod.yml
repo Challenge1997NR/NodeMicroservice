@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  nodejs:
+    image: challenge1997nr/node_microservice:latest
+    environment: 
+      - NODE_ENV=production
+    command: node src/index.js

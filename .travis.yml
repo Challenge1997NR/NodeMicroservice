@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - 14
+
+# safelist
+branches:
+  only:
+  - main
+  - dev
+
+services:
+  - docker
+
+deploy:
+  provider: script
+  script: docker build -t challenge1997nr/node_microservice:latest . -f Dockerfile.prod  && bash bin/docker_push
+  on:
+    branch: main

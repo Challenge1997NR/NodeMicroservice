@@ -1,4 +1,6 @@
 language: node_js
+node_js:
+  - 14
 
 # safelist
 branches:
@@ -9,15 +11,8 @@ branches:
 services:
   - docker
 
-before_install:
-  - docker build -t challenge1997nr/node_microservice:latest . -f Dockerfile.prod
-
 deploy:
   provider: script
-  script: bash bin/docker_push
+  script: docker build -t challenge1997nr/node_microservice:latest . -f Dockerfile.prod  && bash bin/docker_push
   on:
     branch: main
-
-# TODO: Sample tests for CI
-# script:
-#   - npm run test

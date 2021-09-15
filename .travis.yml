@@ -1,0 +1,17 @@
+language: node_js
+
+services:
+  - docker
+
+before_install:
+  - docker build -t challenge1997nr/node_microservice:latest . -f Dockerfile.prod
+
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: main
+
+# TODO: Sample tests for CI
+# script:
+#   - npm run test
